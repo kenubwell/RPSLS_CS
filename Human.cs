@@ -9,25 +9,29 @@ namespace RPSLS
 
 	public class Human : Player
 	{
-		public Human()
+		public Human(string name, string gestureSelected, string[] gestureList, int wins)
 		{
+			this.name = name;
+			this.gestureSelected = gestureSelected;
+			this.gestureList = gestureList;
+			this.wins = wins;
 
 		}
 
 		public string setName()
         {
 			Console.WriteLine("Please enter in a player name: ");
-			string userName = Console.ReadLine();
+			this.name = Console.ReadLine();
         }
 
 		public string chooseGesture()
         {
 			bool gestureConfirmed = false;
-			Console.WriteLine("Enter in '0' for " this.gestureList[0]);
-			Console.WriteLine("Enter in '1' for " this.gestureList[1]);
-			Console.WriteLine("Enter in '2' for " this.gestureList[2]);
-			Console.WriteLine("Enter in '3' for " this.gestureList[3]);
-			Console.WriteLine("Enter in '4' for " this.gestureList[4]);
+			Console.WriteLine($"Enter in '0' for {this.gestureList[0]}");
+			Console.WriteLine($"Enter in '1' for {this.gestureList[1]}");
+			Console.WriteLine($"Enter in '2' for {this.gestureList[2]}");
+			Console.WriteLine($"Enter in '3' for {this.gestureList[3]}");
+			Console.WriteLine($"Enter in '4' for {this.gestureList[4]}");
 
 			while (gestureConfirmed = false)
             {
