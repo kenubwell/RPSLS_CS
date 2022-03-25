@@ -18,13 +18,15 @@ namespace RPSLS
 
 		}
 
-		public string setName()
+
+		public void setName()
         {
 			Console.WriteLine("Please enter in a player name: ");
 			this.name = Console.ReadLine();
         }
 
-		public string chooseGesture()
+
+		public void chooseGesture()
         {
 			bool gestureConfirmed = false;
 			Console.WriteLine($"Enter in '0' for {this.gestureList[0]}");

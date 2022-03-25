@@ -17,11 +17,14 @@ namespace RPSLS
 			this.gestureList = gestureList;
 			this.wins = wins;
 		}
-		public string setName()
+
+		public void setName()
         {
 			this.name = "SkyNet";
         }
-		public string chooseGesture()
+
+
+		public void chooseGesture()
         {
 			Console.WriteLine("Ai's gesture is...");
 			Thread.Sleep(2000);
