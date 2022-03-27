@@ -10,8 +10,8 @@ namespace RPSLS
     public class Player
     {
         public string name;
-        public string gesterSelected;
+        public string gestureSelected;
         public int wins;
-        public string[] gestureList = {'rock', 'paper', 'scissors','lizard', 'spock'}
+        public string[] gestureList = { "rock", "paper", "scissors", "lizard", "spock" };
     }
 }

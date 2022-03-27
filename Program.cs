@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-	public class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("My First C# program");
+            Game game = new Game();
+            game.runGame();
         }
     }
 }

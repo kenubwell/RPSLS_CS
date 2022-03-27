@@ -34,7 +34,7 @@ namespace RPSLS
 			if (num == 0)
             {
 				this.gestureSelected = this.gestureList[0];
-				Console.WriteLine({{this.gestureSelected});
+				Console.WriteLine(this.gestureSelected);
 			}
 			else if (num == 1)
             {
