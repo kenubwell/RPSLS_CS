@@ -9,7 +9,8 @@ namespace RPSLS
 
 	public class Human : Player
 	{
-		public Human(string name, string gestureSelected, string[] gestureList, int wins)
+		//the following is the construtor to set values
+		public Human()
 		{
 			this.name = name;
 			this.gestureSelected = gestureSelected;

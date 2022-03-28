@@ -10,14 +10,16 @@ namespace RPSLS
 	
 	public class Game
 	{
-		public void game()
+		public Game()
 		{
 			Human playerOne = new Human();
+		
 		}
 
 		public void runGame()
         {
 			this.displayWelcome();
+			this.gameType();
         }
 
 		public void displayWelcome()
@@ -36,6 +38,46 @@ namespace RPSLS
 			Console.WriteLine("- Paper disproves Spock");
 			Console.WriteLine("- Spock vaporizes Rock");
 		}
+
+		public void gameType()
+        {
+
+			bool gameType = false;
+
+			while (gameType is false)
+            {
+			Console.WriteLine("Enter in the game type. Press '1' for Single Player (versus AI) || or Press '2' for Multiplayer game:");
+			int typeOfGame = int.Parse(Console.ReadLine());
+
+				if (typeOfGame == 1 || typeOfGame == 2)
+                {
+					if (typeOfGame == 1)
+                    {
+						Human playerOne = new Human();
+						AI playerTwo = new AI();
+						playerOne.setName();
+						playerTwo.setName();
+						gameType = true;
+					}
+					else if (typeOfGame == 2)
+					{
+						Human playerOne = new Human();
+						Human playerTwo = new Human();
+						playerOne.setName();
+						Console.WriteLine($"Player 1 is set for {playerOne.name}");
+						playerTwo.setName();
+						Console.WriteLine($"It will be Player 1 {playerOne.name} versus Player 2 {playerTwo.name}");
+						gameType = true;
+                    }
+					
+                }
+				else if (typeOfGame != 1 || typeOfGame != 2)
+                {
+					Console.WriteLine("Invalid Entry.");
+					gameType = false;
+				}
+            }
+        }
 	}
 
 }

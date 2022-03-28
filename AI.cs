@@ -10,7 +10,7 @@ namespace RPSLS
 
 	public class AI : Player
 	{
-		public AI(string name, string gestureSelected, string[] gestureList, int wins)
+		public AI()
 		{
 			this.name = name;
 			this.gestureSelected = gestureSelected;
