@@ -29,8 +29,8 @@ namespace RPSLS
 			Console.WriteLine("Ai's gesture is...");
 			Thread.Sleep(2000);
 
-			Random rnd = new Random(4);
-			int num = rnd.Next();
+			var rand = new Random();
+			int num = rand.Next(5);
 			if (num == 0)
             {
 				this.gestureSelected = this.gestureList[0];
