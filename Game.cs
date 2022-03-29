@@ -86,6 +86,9 @@ namespace RPSLS
 		public void humanGameRound(Human playerOne, Human playerTwo)
 		{
 			int roundCount = 1;
+			Console.WriteLine($"The Current Round is 'Round {roundCount}");
+			playerOne.chooseGesture();
+			playerTwo.chooseGesture();
 
 			while (playerOne.wins < 2 && playerTwo.wins < 2)
 			{
@@ -167,8 +170,13 @@ namespace RPSLS
 		{
 			int roundCount = 1;
 
+
 			while (playerOne.wins < 2 && playerTwo.wins < 2)
 			{
+				Console.WriteLine($"The Current Round is 'Round {roundCount}'");
+				playerOne.chooseGesture();
+				playerTwo.chooseGesture();
+
 				if (playerOne.gestureSelected == playerTwo.gestureSelected)
 				{
 					Console.WriteLine($"This round is a tie you both had {playerTwo.gestureSelected}");
@@ -262,12 +270,12 @@ namespace RPSLS
 			if (playerOne.wins == 2)
 			{
 				Console.WriteLine($"{playerOne.name} wins the game!");
-				Console.WriteLine($"Summary of the game: The Winner {playerOne.name} had {playerOne.wins} || The Loser {playerTwo.name} had {playerTwo.wins}");
+				Console.WriteLine($"Summary of the game: The Winner {playerOne.name} had {playerOne.wins} wins || The Loser {playerTwo.name} had {playerTwo.wins} wins");
 			}
 			else if (playerTwo.wins == 2)
 			{
 				Console.WriteLine($"{playerTwo.name} wins the game!");
-				Console.WriteLine($"Summary of the game: The Winner {playerTwo.name} had {playerTwo.wins} || The Loser {playerOne.name} had {playerOne.wins}");
+				Console.WriteLine($"Summary of the game: The Winner {playerTwo.name} had {playerTwo.wins} wins || The Loser {playerOne.name} had {playerOne.wins} wins");
 			}
 		}
 	}
